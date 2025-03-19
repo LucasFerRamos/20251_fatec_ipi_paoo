@@ -1,0 +1,9 @@
+{
+    "nome": "Ana",
+    "idade": 17,
+    "deMaior": false,
+    "objeto": [
+        {}, true, false, ""  
+    ]
+
+}

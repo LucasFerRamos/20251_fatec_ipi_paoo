@@ -1,5 +1,84 @@
-const valores = [1, 2, 3, 4]
-const res = valores.reduce((ac, v) => ac + v)
+
+//objetos literais Javascript
+// const calculadora = {
+//     soma: function(a,b){
+//         return a + b
+//     },
+//     subtracao:(a,b) => a - b
+    
+// }
+// console.log(calculadora.soma(2,5))
+
+// uma concessionária que tem cnpj e endereço(logradouro,numero e bairro). 
+// Ela tem um estoque de veiculos. Cada veiculo  tem marca, modelo 
+// e ano de fabricação. Em um determinado momento, 
+// talvez o estoque esteja vazio. Noutro, talvez ele tenha 17 veiculos.
+
+// const concessionaria = {
+//     cnpj:'CNPJ',
+//     endereco: {
+//         logradouro: 'logradouro',
+//         numero: 10,
+//         bairro: {
+//             nome: 'Vila J',
+//             quantidadeMoradores: 500
+//         }
+//     },
+//     veiculos: [
+//         {
+//             marca: 'Fiat',
+//             modelo: 'Uno',
+//             ano: 1990
+//         },
+//         {
+//             marca: 'Honda',
+//             modelo: 'Fit',
+//             ano: 2010
+//         }
+//     ],
+//     estoque: {
+        
+//         quantidade:[0,17]
+//     }
+    
+    
+// }
+// for(let veiculo of concessionaria.veiculos){
+//     console.log(veiculo.marca)
+// }
+
+// for(let i = 0; i < concessionaria.veiculo.length;i++){
+// console.log(concessionaria.veiculo[i].marca)
+// }
+// console.log(concessionaria.veiculo[1].modelo)
+// const pessoa = {
+//     nome: 'Maria',
+//     idade: 21,
+//     endereco:{
+//         logradouro: 'Rua B',
+//         numero: 10
+//     }
+// }
+// console.log(pessoa.endereco.logradouro)
+// console.log(pessoa['endereco']['numero'])
+// console.log(pessoa.endereco['numero'])
+// //uma pessoa que se chama João e tem 17 anos 
+// const pessoa = {
+//     nome: 'João',
+//     idade: 17
+// }
+
+// console.log(pessoa.nome)
+// console.log(pessoa['idade'])
+// //operador de desestruturação de objeto
+// const{nome, idade} = pessoa 
+// console.log(nome, idade)
+
+// const nome = pessoa.nome
+// const idade = pessoa.idade
+// console.log(nome, idade)
+// const valores = [1, 2, 3, 4]
+// const res = valores.reduce((ac, v) => ac + v)
 
 // const nomes = ['Ana Paula', 'Antonio', 'Rodrigo', 'Alex', 'Cristina']
 //produzir um novo vetor contendo a letra inicial de cada nome
@@ -154,18 +233,18 @@ const res = valores.reduce((ac, v) => ac + v)
 
 //funções, código 1.6.1
 //definição
-function hello(){
-    console.log('oi')
-}
-//chamada da função
-hello()
-//É O MESMO QUE DIZER 
-//hello(undefined)
+// function hello(){
+//     console.log('oi')
+// }
+// //chamada da função
+// hello()
+// //É O MESMO QUE DIZER 
+// //hello(undefined)
 
-function hello(nome){
-    console.log('Oi, ' + nome)
-}
-hello('Pedro')
+// function hello(nome){
+//     console.log('Oi, ' + nome)
+// }
+// hello('Pedro')
 
 //vetores
 //declaração
