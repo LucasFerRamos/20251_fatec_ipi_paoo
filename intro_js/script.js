@@ -1,3 +1,57 @@
+function calculoDemorado(n){
+  //1 + 2 + ... + n-1 + n 
+  //1 Construir um objeto do tipo Promise, entregando  para o construtor a função que representa a computação demorada
+ 
+  //a função que representa a computação demorada, recebe duas funções como parâmetro. A primeira deve ser chamada quando a computação terminar com sucesso. A segunda, por outro lado, deve ser chamada quando a computação terminar com erro
+  const p = new Promise((resolve, reject) => {
+    let acumulador = 0
+    for ( let i = 1; i <= n; i++) 
+        acumulador += i
+    resolve(acumulador)
+
+  })
+  //2.Devolve a promise
+  return p
+}
+
+const promiseResultante = calculoDemorado(10)
+promiseResultante.then((res) => {
+  console.log(`Deu certo: ${res}`)
+
+})
+//  //processamento síncrono(bloqueante) e processamento assíncrono
+// const fs = require('fs')
+
+
+// //callback hell
+// const exibirConteudo = (erro, conteudo) => {
+//     if(erro){
+//         console.log(`Deu erro: ${erro}`)
+//     }else{
+//         console.log(`Funcionou: ${conteudo.toString()}`)
+//         const dobro = Number(conteudo.toString()) * 2
+//         const finalizar = (erro) => {
+//             console.log(`${erro ? 'Deu erro: ' + erro : 'Dobro armazenado com sucesso. C' }`)
+//         }
+//         fs.writeFile('dobro.txt', dobro.toString(), finalizar)
+//         console.log("A")
+//     }
+// }
+// fs.readFile("arquivo.txt", exibirConteudo) //IO-BOUND
+// console.log("B")
+// // console.log("Script principal continua executando...")
+// console.log("Script principal terminando...")
+
+ // function dobro(n){
+//     return 2* n
+// }
+// const res = dobro(5) //bloqueante
+// console.log(res)
+//IO-Bound
+
+
+//objetos JSON: JAVASCRIPT OBJECT NOTATION
+
 
 //objetos literais Javascript
 // const calculadora = {
