@@ -1,5 +1,55 @@
+const fatorial = (n) => {
+  //n! = n * (n-1) * (n-2) * ... * 1
+  if (n<0) return Promise.reject('Somente valores positivos')
+  let f = 1
+  for(let i =2; i <= n; i++) 
+    f *= i 
+  return Promise.resolve(f)
+}
+//tratar com then/catch
+function chamadaComThenCatch(){
+  fatorial(5)
+  .then(res => console.log(`Funcionou: ${res}`))
+  .catch(err => console.log(`Erro ${err}`))
 
+  fatorial(-1)
+  .then(res => console.log(`Funcionou: ${res}`))
+  .catch(err => console.log(`Erro: ${err}`))
+}
+chamadaComThenCatch()
+//tratar com async/await
+// async function chamadaComAsyncAwait(){}
+const chamadaComAsyncAwait = async () => {
+  try{
+    const f1 = await fatorial(5)
+    console.log(f1)
+  }
+  catch(err){
+    console.log(`Erro ${err}`)
+  }
 
+  try{
+    const f2 = await fatorial(-1)
+    console.log(f2)
+  }
+  catch(err){
+    console.log(`Erro: ${err}`)
+  }
+
+}
+chamadaComAsyncAwait()
+
+//async/await
+// async function hello(nome){
+//   return `Oi,${nome}`
+// }
+// function hello(nome){
+//   return new Promise((resolve, reject) => resolve(`Oi, ${nome}`))
+// }
+// const res = hello('Ivo')
+// res.then(saudacao => console.log(`${saudacao}`))
+// const res = hello('Ivo')
+// console.log(res)
 
 
 // function calculoRapidinho(n){
